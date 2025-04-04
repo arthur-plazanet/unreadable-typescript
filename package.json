@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "exports": {
-    "*": "./build/index.js"
+    "*": "./build/index.js",
+    "types": "./build/index.d.ts"
   },
   "typings": "./build/index.d.ts",
   "scripts": {
