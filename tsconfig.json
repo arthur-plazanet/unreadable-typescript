@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "tests/index.test.ts"],
   "exclude": ["**/*.test.ts"],
   "compilerOptions": {
     "module": "esnext",
@@ -11,6 +11,9 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
