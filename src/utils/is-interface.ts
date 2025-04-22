@@ -1,5 +1,9 @@
 export { isTSInterface };
 
+/*
+ * How to tell if an object conforms to a Typescript interface
+ * https://medium.com/developer-rants/follow-up-how-to-tell-if-an-object-conforms-to-a-typescript-interface-f99b4b77d602
+ */
 function isTSInterface<T>(
   value: any,
   keys: (keyof T)[],
