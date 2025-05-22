@@ -1,7 +1,2 @@
-import { isTSInterface } from './utils/is-interface';
-
-export { isTSInterface };
-
-export function greet(name: string): string {
-  return `Hello, ${name}!`;
-}
+export * from './enum';
+export * from './interface';

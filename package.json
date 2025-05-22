@@ -1,13 +1,19 @@
 {
   "name": "unreadable-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "!**/*.map"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./enum": "./dist/enum/index.js",
+    "./interface": "./dist/interface/index.js"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
