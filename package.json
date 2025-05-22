@@ -6,8 +6,14 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "!**/*.map"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./enum": "./dist/enum/index.js",
+    "./interface": "./dist/interface/index.js"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
