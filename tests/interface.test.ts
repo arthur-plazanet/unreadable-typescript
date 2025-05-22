@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { isTSInterface } from '../src/utils/is-interface';
+import { isTSInterface } from '../src/interface';
 
 interface Cat {
   name: string;
