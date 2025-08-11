@@ -12,7 +12,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Get diff lines
         id: diff
         uses: Equip-Collaboration/diff-line-numbers@v1.1.0
