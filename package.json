@@ -1,7 +1,12 @@
 {
   "name": "unreadable-typescript",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "private": false,
+  "description": "type UnreadableType<T> = T extends object ? { [K in keyof T]: UnreadableType<T[K]> } : T;",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arthur-plazanet/unreadable-typescript"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -28,8 +33,7 @@
     "typescript": "5.9.2",
     "vitest": "3.2.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/arthur-plazanet/unreadable-typescript"
+  "publishConfig": {
+    "access": "public"
   }
 }
