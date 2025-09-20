@@ -8,6 +8,7 @@ import {
   isUndefined,
   isObject,
   isPromise,
+  withoutKey,
 } from '../src/utils';
 
 const bananaBoat = [1, 2, 3];
@@ -18,6 +19,9 @@ const ghostInTheMachine = null;
 const voidThing = undefined;
 const truthyMcGee = true;
 const promiseOfPizza = Promise.resolve('🍕');
+
+const cat = { name: 'Garfield', color: 'orange', age: 5 };
+const catWithoutAge = withoutKey(cat, 'age');
 
 test('Confused Monocle Helpers', () => {
   expect(isArray(bananaBoat)).toBe(true);
@@ -34,4 +38,8 @@ test('Confused Monocle Helpers', () => {
   expect(isString(bananaBoat)).toBe(false);
   expect(isObject(dancingDuck)).toBe(false);
   expect(isPromise(mysteryBox)).toBe(false);
+});
+
+test('Object helpers', () => {
+  expect(catWithoutAge).toEqual({ name: 'Garfield', color: 'orange' });
 });

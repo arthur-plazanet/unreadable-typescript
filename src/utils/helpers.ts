@@ -15,11 +15,6 @@ function isString(data: unknown): data is string {
   return typeof data === 'string';
 }
 
-function withoutKey<T>(obj: Record<string, T>, key: string): Record<string, T> {
-  const { [key]: _omit, ...rest } = obj;
-  return rest;
-}
-
 function isArray(data: unknown): data is unknown[] {
   return Array.isArray(data);
 }
@@ -54,4 +49,10 @@ function isPromise<T = unknown>(data: unknown): data is Promise<T> {
     isFunction((data as any).then) &&
     isFunction((data as any).catch)
   );
+}
+
+// Objects
+function withoutKey<T>(obj: Record<string, T>, key: string): Record<string, T> {
+  const { [key]: _omit, ...rest } = obj;
+  return rest;
 }
