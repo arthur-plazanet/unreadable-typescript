@@ -1,6 +1,6 @@
 {
   "name": "unreadable-typescript",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "private": false,
   "description": "type UnreadableType<T> = T extends object ? { [K in keyof T]: UnreadableType<T[K]> } : T;",
   "repository": {
