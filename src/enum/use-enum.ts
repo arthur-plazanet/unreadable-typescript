@@ -9,7 +9,6 @@
  * At compile time, the `keyof` keytword works differently than regular objects, and `keyof typeof`should be used to get a Type from enum
  * All of this is quite confusing and again 🌀 unreadable so let's make some simple helpers using a class
  */
-type Class<T> = new (...args: any[]) => T;
 
 export function useEnum<T extends object>(enumObject: T) {
   // TODO: Search Lazy Caching - Compute .keys, .values / entries only once to be reusable afterwards
