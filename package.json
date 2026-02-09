@@ -1,6 +1,6 @@
 {
   "name": "unreadable-typescript",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": false,
   "description": "type UnreadableType<T> = T extends object ? { [K in keyof T]: UnreadableType<T[K]> } : T;",
   "repository": {
@@ -25,8 +25,8 @@
     "test": "vitest run",
     "test:watch": "vitest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["typescript", "type", "utility", "unreadable"],
+  "author": "Arthur Plazanet",
   "license": "ISC",
   "devDependencies": {
     "tsup": "8.5.1",
