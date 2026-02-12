@@ -12,4 +12,16 @@
 npm i --save-dev unreadable-typescript
 ```
 
-Small helper / utility library to simplify TypeScript's complex and awkward syntax.
+Small helper / utility library to simplify and manipulate TypeScript's complex and awkward syntax.
+
+## Structure
+
+```graphql
+src/
+├── enum/       # useEnum - work with enums (keys, values, entries, hasKey, hasValue)
+├── interface/  # isTSInterface - runtime check if object conforms to a TS interface
+├── type/       # extend, set - curried type builders to compose object types from unknown
+└── utils/      # Type guards (isString, isNumber, isArray, isObject, ...) + withoutKey
+```
+
+
