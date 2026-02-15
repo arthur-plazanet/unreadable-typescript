@@ -9,8 +9,6 @@ jobs:
   ci:
     uses: arthur-plazanet/use-github-actions/.github/workflows/_release-publish.yml@main
 
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     permissions:
       contents: write # create releases/tags
       id-token: write # npm provenance (OIDC)
